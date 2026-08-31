@@ -1,0 +1,71 @@
+% !TEX program = xelatex
+% 编译：latexmk -xelatex main.tex
+\documentclass[11pt]{ctexart}
+
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,patterns,calc,backgrounds}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{caption}
+\usepackage[colorlinks=true,linkcolor=blue!60!black,urlcolor=blue!60!black]{hyperref}
+\usepackage{float}
+
+\definecolor{plainC}{RGB}{235,244,255}
+\definecolor{paperC}{RGB}{255,247,230}
+\definecolor{numC}{RGB}{236,250,236}
+\definecolor{warnC}{RGB}{255,236,236}
+
+% —— 说人话框：给零基础读者的直觉解释 ——
+\newtcolorbox{plainbox}[1][]{breakable,enhanced,colback=plainC,colframe=blue!45!black,
+  title={\textbf{说人话} #1},fonttitle=\small,left=2mm,right=2mm,top=1mm,bottom=1mm}
+% —— 论文依据框 ——
+\newtcolorbox{paperbox}[1][]{breakable,enhanced,colback=paperC,colframe=orange!70!black,
+  title={\textbf{论文依据} #1},fonttitle=\small,left=2mm,right=2mm,top=1mm,bottom=1mm}
+% —— 关键数字框 ——
+\newtcolorbox{numbox}[1][]{breakable,enhanced,colback=numC,colframe=green!40!black,
+  title={\textbf{关键数字} #1},fonttitle=\small,left=2mm,right=2mm,top=1mm,bottom=1mm}
+% —— 踩坑记录框 ——
+\newtcolorbox{warnbox}[1][]{breakable,enhanced,colback=warnC,colframe=red!60!black,
+  title={\textbf{踩过的坑} #1},fonttitle=\small,left=2mm,right=2mm,top=1mm,bottom=1mm}
+
+\setlength{\parskip}{0.45em}
+
+\title{\textbf{从``逐点分类''到``一栋一栋的楼''}\\[0.3em]
+\Large 建筑单体分割与噪声清除（管线步骤 2--3）零基础讲义}
+\author{Columbus LiDAR $\to$ LOD2 管线 · 汇报准备材料}
+\date{2026 年 8 月 30 日}
+
+\begin{document}
+\maketitle
+
+\begin{plainbox}[：这本讲义讲什么]
+上一步（RandLA-Net 语义分割）只回答了``\textbf{这个点是不是建筑}''；本步要回答
+``\textbf{这个点属于哪一栋楼}''，并把混进来的``假建筑''（桥、匝道、树冠、电线）清理出去。
+讲义假设你没有任何点云、图像处理或机器学习背景，每个术语第一次出现时都会解释；
+读完后你应当能向导师完整讲出：用了哪篇论文的什么方法、每一步为什么这么设计、
+以及 2{,}296 $\to$ 2{,}267 每一个数字的来龙去脉。
+\end{plainbox}
+
+\tableofcontents
+\newpage
+
+\input{modules/m1}
+\newpage
+\input{modules/m2}
+\newpage
+\input{modules/m3}
+\newpage
+\input{modules/m4}
+\newpage
+\input{modules/m5}
+\newpage
+\input{modules/m6}
+\newpage
+\input{modules/glossary}
+
+\end{document}

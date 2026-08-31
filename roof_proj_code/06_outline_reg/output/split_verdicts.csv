@@ -1,0 +1,9 @@
+instance_id,n_parts,ground_frac_in_gap,verdict
+209,2,1.0,TWO_BUILDINGS
+216,1,-1.0,single_connected
+217,2,0.96,TWO_BUILDINGS
+228,2,1.0,TWO_BUILDINGS
+307,1,-1.0,single_connected
+1244,2,1.0,TWO_BUILDINGS
+1703,2,1.0,TWO_BUILDINGS
+2098,2,0.99,TWO_BUILDINGS
