@@ -30,3 +30,6 @@ venv/
 _build/
 cache/
 outputs/
+
+# 内部索引文档，不上传
+PIPELINE.md

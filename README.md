@@ -32,7 +32,7 @@ quantitative accuracy evaluation.
 
 Source code, method documentation and result tables only. Directories are numbered
 by pipeline stage, and each has its own README describing the method and the
-literature it follows; `roof_proj_code/PIPELINE.md` is the overall index.
+literature it follows.
 
 Not included, for size and licensing reasons:
 
