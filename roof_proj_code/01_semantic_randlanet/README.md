@@ -3,22 +3,26 @@
 This directory contains the retained RandLA-Net implementation and model artifacts
 for the Columbus airborne-LiDAR dataset.
 
+For downloading the checkpoint, input requirements and inference commands, see
+[PRETRAINED_MODEL.md](PRETRAINED_MODEL.md).
+
 ## Retained result
 
 - Checkpoint: `results/best.pth`
-- Full-area predictions: `results/preds/` (19 LAZ tiles)
+- Full-area predictions: `results/preds/` (19 LAZ tiles, retained locally; not included in GitHub)
 - Prediction classes: ASPRS 1=others, 2=ground, 5=vegetation, 6=building
 - Prediction CRS: original compound CRS, including EPSG:3754 horizontal coordinates
 
-The predictions are the intended starting point for new LoD2 research. Retraining
-RandLA-Net is not required unless the segmentation itself becomes a research target.
+The retained predictions are the local starting point for new LoD2 research.
+With this public repository, use the checkpoint to generate predictions from your
+own source tiles; retraining is not required for inference.
 
 ## Code layout
 
 - `randla_net/`: model, preprocessing, sampling, training and inference modules
 - `scripts/`: command-line entry points and diagnostic checks
 - `tests/`: deterministic unit tests for preprocessing and model operations
-- `results/`: reviewed checkpoint, metrics and full-area predictions
+- `results/`: published checkpoint and metrics; full-area predictions are local only
 - `outputs/`: disposable outputs created by a new local run
 - `cache/`: disposable preprocessing cache created by `scripts/prep.py`
 
@@ -29,7 +33,7 @@ first, then install `requirements.txt`.
 
 ```bash
 export RANDLA_ROOT=/path/to/roof_proj_code
-cd "$RANDLA_ROOT/randla-net"
+cd "$RANDLA_ROOT/01_semantic_randlanet"
 ```
 
 The project root is detected automatically when `RANDLA_ROOT` is not set.

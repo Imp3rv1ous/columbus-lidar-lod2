@@ -30,7 +30,8 @@ quantitative accuracy evaluation.
 
 ## Repository contents
 
-Source code, method documentation and result tables only. Directories are numbered
+Source code, method documentation, result tables and the trained RandLA-Net
+checkpoint are included. Directories are numbered
 by pipeline stage, and each has its own README describing the method and the
 literature it follows.
 
@@ -38,9 +39,14 @@ Not included, for size and licensing reasons:
 
 - Point clouds (`.laz` / `.las` / `.ply`) — the source data is publicly available
   from the [USGS 3D Elevation Program](https://www.usgs.gov/3d-elevation-program)
-- Trained model weights
 - Third-party reference code and papers — please obtain these from their original
   sources
+
+## Pretrained model and practical notes
+
+- [Checkpoint and inference guide](roof_proj_code/01_semantic_randlanet/PRETRAINED_MODEL.md)
+- [Download best.pth](https://github.com/Imp3rv1ous/columbus-lidar-lod2/raw/refs/heads/main/roof_proj_code/01_semantic_randlanet/results/best.pth)
+- [Roof plane limitations and experiment notes](roof_proj_code/04_05_roof_planes/PRACTICAL_NOTES.md)
 
 ## Environment
 

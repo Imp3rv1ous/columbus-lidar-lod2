@@ -94,7 +94,7 @@ class Config:
     # --- derived paths ---
     @property
     def data_dir(self) -> Path:
-        return self.root / "LiDAR_data"
+        return self.root / "00_LiDAR_data"
 
     @property
     def train_dir(self) -> Path:
@@ -102,16 +102,16 @@ class Config:
 
     @property
     def cache_dir(self) -> Path:
-        return self.root / "randla-net" / "cache"
+        return self.root / "01_semantic_randlanet" / "cache"
 
     @property
     def out_dir(self) -> Path:
-        return self.root / "randla-net" / "outputs"
+        return self.root / "01_semantic_randlanet" / "outputs"
 
     @property
     def results_dir(self) -> Path:
         """Reviewed model artifacts synced back from the training machine."""
-        return self.root / "randla-net" / "results"
+        return self.root / "01_semantic_randlanet" / "results"
 
     def orig_laz(self, tile: str) -> Path:
         """Return the canonical original full-tile LAZ path."""

@@ -33,3 +33,6 @@ outputs/
 
 # 内部索引文档，不上传
 PIPELINE.md
+
+# Publish only the reviewed RandLA-Net checkpoint.
+!/roof_proj_code/01_semantic_randlanet/results/best.pth

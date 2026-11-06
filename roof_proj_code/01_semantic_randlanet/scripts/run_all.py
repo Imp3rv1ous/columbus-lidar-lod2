@@ -4,7 +4,7 @@ Every stage appends to ONE markdown report (RANDLA_REPORT) so after the run the 
 syncs back a single reviewable file (per-epoch per-class IoU + inference class
 distributions + warnings). Aborts on the first failing stage.
 
-  cd /workspace/proj/randla-net
+  cd /workspace/proj/01_semantic_randlanet
   export RANDLA_ROOT=/workspace/proj
   export RANDLA_REPORT=outputs/run_report.md
   python3 scripts/run_all.py                 # GPU, 32 workers, batch 8, 100 epochs
